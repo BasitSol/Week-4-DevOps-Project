@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello from Jenkins Docker Build'!);
   res.end('Hello from Automated Jenkins CI/CD!\n');
-   
+  res.end('Hello from Automated Jenkins CI/CD - Latest Update! (Build ' + new Date().toLocaleTimeString() + ')\n'); 
 });
 
 server.listen(port, hostname, () => {
