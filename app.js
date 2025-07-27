@@ -5,10 +5,16 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello from Jenkins Docker Build!\n');
+  res.end('Hello from Jenkins Docker Build'!);
   res.end('Hello from Automated Jenkins CI/CD!\n');
+   
 });
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
+  // Option 1: Keep both messages
+  console.log("Hello from my local app!");
+  console.log("Hello from GitHub's main!");
+
+  
 });
