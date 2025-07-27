@@ -1,12 +1,11 @@
 {
-  "name": "my-docker-app",
+  "name": "my-simple-app",
   "version": "1.0.0",
-  "description": "A simple Node.js Docker app for EC2 project",
+  "description": "A simple Node.js app for Docker testing",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "author": "Your Name",
+  "license": "ISC"
 }

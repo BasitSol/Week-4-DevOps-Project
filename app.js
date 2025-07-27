@@ -1,14 +1,13 @@
-// app.js
-const express = require('express');
-const app = express();
+const http = require('http');
+const hostname = '0.0.0.0'; // Listen on all network interfaces
 const port = 3000;
 
-app.get('/', (req, res) => {
-  const logMessage = `[${new Date().toISOString()}] - Request received from ${req.ip}`;
-  console.log(logMessage); // This will go to stdout/stderr of the container
-  res.send('Hello from Dockerized App!');
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello from Jenkins Docker Build!\n');
 });
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
